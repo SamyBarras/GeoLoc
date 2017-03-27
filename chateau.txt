@@ -1,0 +1,8 @@
+﻿titre="Le chateau de Selles";
+texte="Les murs extérieurs du chateau sont faits de gres, tandis que les gaines qui percent ses hauts murs sont en pierre blanche (craie).[br]\
+Du XIVeme au XVIIIeme siecle, le chateau est utilisé comme prison, \
+et les prisonniers gravent dans les murs de craie les pensées qui les hantent : \
+hallebardier, Saint-Georges, blasons, moulins, tours, scenes symboliques ou religieuses, etc... [br]\
+Aujourd\'hui ces graffiti sont toujours visibles, mais l\'apparition \
+de champignons menacant leur intégrité a poussé le service d\'Art et d\'Histoire de la ville á les protéger en limitant l\'acces du public \
+et á entamer des travaux de conservation...";

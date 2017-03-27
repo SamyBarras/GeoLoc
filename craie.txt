@@ -1,0 +1,4 @@
+﻿titre="La craie";
+texte="La formation de la craie remonte á la derniere epoque de l\'ere secondaire, le Cretace, entre 130 et 65millions d\'annees avant notre ere.[br][br]\
+Toute notre region est alors sous la mer, ou vivent des coccolithophoridés, des algues unicellulaires microscopiques qui, pour se protéger, s\'entourent d\'une sphere de coccolithes, des disques agglomeres les uns aux autres.[br][br]\
+Quand l\'algue meurt, les coccolihtes tombent au fond de la mer. En se deposant - c\'est la sedimentation - elles forment une boue qui devient compacte, puis se durcit, jusqu\'a devenir une roche cohérente : la craie.";

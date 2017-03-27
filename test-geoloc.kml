@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>test-geoloc</name>
+		<description><![CDATA[]]></description>
+		<Folder>
+			<name>cadre1</name>
+			<Placemark>
+				<name>Point 1</name>
+				<styleUrl>#icon-503-CDDC39-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0728614,50.6211474,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point 2</name>
+				<styleUrl>#icon-503-CDDC39-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0730739,50.6212086,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point 3</name>
+				<styleUrl>#icon-503-CDDC39-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0732114,50.6210172,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point 4</name>
+				<styleUrl>#icon-503-CDDC39-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0729861,50.6209568,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ligne 6</name>
+				<styleUrl>#line-CDDC39-1-nodesc</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>3.0724812,50.6209781,0.0 3.0727252,50.6210402,0.0</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Ligne 7</name>
+				<styleUrl>#line-CDDC39-1-nodesc</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>3.07274,50.6210453,0.0 3.0728889,50.6210836,0.0</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Ligne 8</name>
+				<styleUrl>#line-CDDC39-1-nodesc</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>3.0729036,50.6210895,0.0 3.0730404,50.6211261,0.0</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>cadre2</name>
+			<Placemark>
+				<name>Point 1</name>
+				<styleUrl>#icon-503-62AF44-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0726629,50.621101,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point 2</name>
+				<styleUrl>#icon-503-62AF44-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0728533,50.6211499,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point 3</name>
+				<styleUrl>#icon-503-62AF44-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0729807,50.6209547,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point 4</name>
+				<styleUrl>#icon-503-62AF44-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0727668,50.6209117,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>cadre3</name>
+			<Placemark>
+				<name>Point 1</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.072459,50.6210546,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point 2</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0726562,50.6210993,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point 3</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0727635,50.62091,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point 4</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<Point>
+					<coordinates>3.0725442,50.6208657,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Style id='icon-503-62AF44-nodesc-normal'>
+			<IconStyle>
+				<color>ff44AF62</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-503-62AF44-nodesc-highlight'>
+			<IconStyle>
+				<color>ff44AF62</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-503-62AF44-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-503-62AF44-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-503-62AF44-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-503-CDDC39-nodesc-normal'>
+			<IconStyle>
+				<color>ff39DCCD</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-503-CDDC39-nodesc-highlight'>
+			<IconStyle>
+				<color>ff39DCCD</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-503-CDDC39-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-503-CDDC39-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-503-CDDC39-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-503-DB4436-nodesc-normal'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-503-DB4436-nodesc-highlight'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-503-DB4436-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-503-DB4436-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-503-DB4436-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='line-CDDC39-1-nodesc-normal'>
+			<LineStyle>
+				<color>ff39DCCD</color>
+				<width>1</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='line-CDDC39-1-nodesc-highlight'>
+			<LineStyle>
+				<color>ff39DCCD</color>
+				<width>2.0</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='line-CDDC39-1-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#line-CDDC39-1-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#line-CDDC39-1-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>

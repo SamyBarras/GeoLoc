@@ -1,0 +1,64 @@
+body {
+    background-color: #404040;
+    overflow:hidden;
+}
+#page{
+    width:95vw;
+    height:90vh;
+    margin:auto;
+    overflow:auto;
+    align:center;
+}
+#title{
+    width:100%;
+    color: #FFCC1B;
+    text-align: center;
+    font-family: "Futura","Avenir","Verdana";
+    text-transform: capitalise; /*uppercase*/
+    font-size: 2.5em;
+}
+#content{
+    width:98%;
+    font-family: "Futura","Avenir","Verdana";
+    font-size: 1.5em;
+    color:#0FE99C;
+    text-align: justify;
+    /*text-justify: inter-word;*/
+}
+
+#logo{
+    background-color: #505050;
+    text-align: center;
+    font-family: "Futura","Avenir","Verdana";
+    font-size: 0.8em;
+    color:#ffffff;
+    /* positioning */
+    bottom: 0;
+    left:0;
+    width:100vw;
+    height:5vh;
+    position:fixed;
+    vertical-align:middle;
+}
+#log{
+    background-color: #505050;
+    font-family: "Futura","Avenir","Verdana";
+    font-size: 0.8em;
+    color:#ffffff;
+    position: fixed;
+    bottom:20px;
+    height:80px; 
+    left:0;
+    width: 100%;
+    text-align: left;
+    visibility: hidden;
+}
+
+@media screen and (orientation:portrait){
+    #title{
+        font-size: 3em;
+    }
+    #content{
+        font-size: 2em;
+    }
+}

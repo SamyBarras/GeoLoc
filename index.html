@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="geoLoc.js"></script>
+<script>
+$(window).load(function() {
+    debug = false;
+    
+    // get geolocation --> thorw error if not available
+    if (navigator.geolocation){
+        var watchId = navigator.geolocation.watchPosition(successCallback, errorCallback, {enableHighAccuracy:true});
+    }
+    else{
+        alert("Votre navigateur ne prend pas en compte la géolocalisation HTML5");
+    }
+    if (debug == false) document.getElementById("log").style.visibility= "hidden";
+    else document.getElementById("log").style.visibility= "visible";
+});
+</script>
+</head>
+<body>
+<div id="topBar"> <a href ="#" onclick="load_d1()"> HOME </a> </div>
+<div id="page">
+    <div id="title"></div><br>
+    <div id="content"></div>
+</div>
+<div id="logo">
+    <img src="left.png" id="left_bttn"></img>
+    une création du collectif ouepo
+    <img src="right.png" id="right_bttn"></img>
+</div>
+<div id="log">---- log ----</div>
+</body>
+</html>

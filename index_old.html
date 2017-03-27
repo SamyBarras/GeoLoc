@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="topBar"> <a href ="#" onclick="load_d1()"> HOME </a> </div>
+
+<div id ="content">
+<p id="title">This text is normal.</p>
+ </div>
+
+<div id="log">initial content</div>
+
+<script type="text/javascript">
+
+var pageEnCours = "intro";
+
+var ref = 0;
+// useful : http://www.coordonnees-gps.fr/
+var jbleba = [
+[ 3.0728614,50.6211474], 
+[ 3.0730739,50.6212086], 
+[3.0732114,50.6210172], 
+[ 3.0729861,50.6209568] 
+];
+//inside([ 1.5, 1.5 ], polygon); // true
+
+var lamaison = [
+[3.0726629,50.621101], 
+[3.0728533,50.6211499], 
+[3.0729807,50.6209547], 
+[3.0727668,50.6209117] 
+];
+
+var iej = [
+[3.072459,50.6210546], 
+[3.0726562,50.6210993], 
+[3.0727635,50.62091], 
+[3.0725442,50.6208657] 
+];
+
+
+
+if (navigator.geolocation)
+    var watchId = navigator.geolocation.watchPosition(successCallback, errorCallback, {enableHighAccuracy:true});
+else
+    alert("Votre navigateur ne prend pas en compte la géolocalisation HTML5");
+    
+function successCallback(position){
+    //alert("Latitude : " + position.coords.latitude + ", longitude : " + position.coords.longitude);
+	
+	ref++;
+ var lat = position.coords.latitude;
+var longi = position.coords.longitude;
+
+
+/*
+// si on veut couper dans les decimales des coords, parce que c'est illisible tout ces chiffres gps
+var variableLa = position.coords.latitude*1000;
+var dizainesLa =  Math.floor(((variableLa%100)/10)*1000);
+var variableLo = position.coords.longitude*1000;
+var dizainesLo =  Math.floor(((variableLo%100)/10)*1000);
+//var unites = variable%10;
+//document.write("La: "+ dizainesLa +"<br>");
+//document.write("Lo: "+ dizainesLo +"<br><br>");
+*/	
+
+// efface tout, affiche le nouveau gps
+document.getElementById('log').innerHTML = "<br>ref: "+ ref;
+
+//affiche les coords
+document.getElementById('log').innerHTML += "<br>"+ lat+"<br>";
+document.getElementById('log').innerHTML += longi +"<br>";
+
+
+if ( inside([longi, lat], jbleba))
+{
+document.getElementById('log').innerHTML += "<br> t'es a JBlebas mec ";
+if (pageEnCours !="d1")	load_d1();
+} else { 
+document.getElementById('log').innerHTML += "<br> t'es pas a JBlebas mec ";
+}
+
+if ( inside([longi, lat], lamaison))
+{
+document.getElementById('log').innerHTML += "<br> t'es a la maison mec ";
+if (pageEnCours !="d2")	load_d2();
+} else { 
+document.getElementById('log').innerHTML += "<br> t'es pas a la maison mec ";
+}
+
+
+if ( inside([longi, lat], iej))
+{
+document.getElementById('log').innerHTML += "<br> t'es a l'iej mec ";
+if (pageEnCours !="d3")	load_d3();
+} else { 
+document.getElementById('log').innerHTML += "<br> t'es pas a l'iej mec ";
+}
+
+if ( 
+(inside([longi, lat], jbleba)==false) 
+&& (inside([longi, lat], lamaison)==false)
+&& (inside([longi, lat], iej)==false )
+){
+	if (pageEnCours !="d0")	{
+	pageEnCours = "d0";
+	document.getElementById("content").innerHTML='<object type="text/html" data="data0.html" ></object>';
+	}
+}
+
+};  // fin du succes callback
+
+
+function load_d1(){
+	pageEnCours = "d1";
+document.getElementById("content").innerHTML='<object type="text/html" data="data1.html" ></object>';
+}
+function load_d2(){
+	pageEnCours = "d2";
+document.getElementById("content").innerHTML='<object type="text/html" data="data2.html" ></object>';
+}
+function load_d3(){
+	pageEnCours = "d3";
+document.getElementById("content").innerHTML='<object type="text/html" data="data3.html" ></object>';
+}
+
+function errorCallback(error){
+    switch(error.code){
+        case error.PERMISSION_DENIED:
+            alert("L'utilisateur n'a pas autorisé l'accès à sa position");
+            break;          
+        case error.POSITION_UNAVAILABLE:
+            alert("L'emplacement de l'utilisateur n'a pas pu être déterminé");
+            break;
+        case error.TIMEOUT:
+            alert("Le service n'a pas répondu à temps");
+            break;
+        }
+};
+
+function stopWatch(){
+    navigator.geolocation.clearWatch(watchId);
+} 
+
+
+
+
+function inside(point, vs) {
+    // ray-casting algorithm based on
+    // http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
+
+    var x = point[0], y = point[1];
+
+    var inside = false;
+    for (var i = 0, j = vs.length - 1; i < vs.length; j = i++) {
+        var xi = vs[i][0], yi = vs[i][1];
+        var xj = vs[j][0], yj = vs[j][1];
+
+        var intersect = ((yi > y) != (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) inside = !inside;
+    }
+
+    return inside;
+};
+
+
+
+</script>
+
+
+
+</body>
+</html>
